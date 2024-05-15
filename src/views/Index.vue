@@ -14,7 +14,7 @@
             <div class="pt-8 pb-8 sm:pt-0">
               <div class="flex flex-wrap justify-between mt-8">
                 <div class="w-full md:w-6/12 px-4">
-                  <a href="/teachVocabApp" class="btn btn-primary">
+                  <router-link to="/teachVocabApp" class="btn btn-primary">
                     <div
                       class="landing-btn relative flex flex-col min-w-0 shadow-lg p-6 bg-white rounded-lg h-full"
                     >
@@ -36,10 +36,10 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </router-link>
                 </div>
                 <div class="w-full md:w-6/12 px-4">
-                  <a href="/teachVocabUpload" class="btn btn-primary">
+                  <router-link to="/teachVocabUpload" class="btn btn-primary">
                     <div
                       class="landing-btn relative flex flex-col min-w-0 shadow-lg p-6 bg-white rounded-lg h-full xs:mt-4 sm:mt-4 md:mt-0"
                     >
@@ -63,12 +63,12 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               <div class="flex justify-center">
                 <div class="w-full md:w-6/12 px-4">
-                  <a href="/teachCounting" class="btn btn-primary">
+                  <router-link to="/teachCounting" class="btn btn-primary">
                     <div
                       class="landing-btn relative flex flex-col min-w-0 shadow-lg p-6 bg-white rounded-lg h-full xs:mt-8 sm:mt-8 md:mt-4"
                     >
@@ -89,12 +89,12 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               <div class="flex flex-wrap justify-between mt-8">
                 <div class="w-full md:w-6/12 px-4">
-                  <a href="/teachAlphabetsApp" class="btn btn-primary">
+                  <router-link to="/teachAlphabetsApp" class="btn btn-primary">
                     <div
                       class="landing-btn relative flex flex-col min-w-0 shadow-lg p-6 bg-white rounded-lg h-full xs:mt-4 sm:mt-4 md:mt-0"
                     >
@@ -117,10 +117,10 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </router-link>
                 </div>
                 <div class="w-full md:w-6/12 px-4">
-                  <a href="/teachAlphabetsUpload" class="btn btn-primary">
+                  <router-link to="/teachAlphabetsUpload" class="btn btn-primary">
                     <div
                       class="landing-btn relative flex flex-col min-w-0 shadow-lg p-6 bg-white rounded-lg h-full xs:mt-8 sm:mt-8 md:mt-0"
                     >
@@ -145,7 +145,7 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -155,16 +155,17 @@
         <div class="w-full mt-8 sm:hidden"></div>
       </div>
     </section>
+    <footer-component />
   </div>
 </template>
 <script>
 import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
-// import FooterComponent from "@/components/Footers/Footer.vue";
+import FooterComponent from "@/components/Footers/Footer.vue";
 
 export default {
   components: {
     IndexNavbar,
-    // FooterComponent,
+    FooterComponent,
   },
 };
 </script>

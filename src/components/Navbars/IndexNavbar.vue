@@ -65,12 +65,13 @@
             </div>
           </li>
           <li class="flex items-center">
-            <a
-              class="hover:text-blueGray-500 text-blueGray-700 px-4 py-2 flex items-center text-2xl font-bold"
-              href="/teachCounting"
+            <router-link to="/teachCounting">
+              <a
+                class="hover:text-blueGray-500 text-blueGray-700 px-4 py-2 flex items-center text-2xl font-bold"
+              >
+                Teach Counting
+              </a></router-link
             >
-              Teach Counting
-            </a>
           </li>
           <li class="flex items-center relative">
             <a
