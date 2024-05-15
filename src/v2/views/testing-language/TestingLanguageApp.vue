@@ -246,7 +246,7 @@ export default {
     async fetchImageTestingData(testImageIdx) {
       try {
         const response = await fetch(
-          `https://32f7-20-191-199-83.ngrok-free.app/api/load-image-testing`,
+          `https://34f7-20-191-199-83.ngrok-free.app/api/load-image-testing`,
           {
             method: "POST",
             headers: {

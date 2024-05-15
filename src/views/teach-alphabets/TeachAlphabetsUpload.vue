@@ -632,7 +632,7 @@ export default {
         formData.append("image", file);
 
         const response = await fetch(
-          "https://32f7-20-191-199-83.ngrok-free.app/api/create-image-learning",
+          "https://34f7-20-191-199-83.ngrok-free.app/api/create-image-learning",
           {
             method: "POST",
             headers: {
