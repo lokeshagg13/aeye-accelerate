@@ -237,7 +237,7 @@ export default {
 
       try {
         const response = await fetch(
-          "https://c330-20-191-199-83.ngrok-free.app/api/segment-image",
+          "https://d39e-20-5-25-56.ngrok-free.app/api/segment-image",
           {
             method: "POST",
             headers: {
@@ -420,7 +420,7 @@ export default {
           return true;
         this.fetchingObjectData = true;
         const response = await fetch(
-          "https://c330-20-191-199-83.ngrok-free.app/api/load-object-learning",
+          "https://d39e-20-5-25-56.ngrok-free.app/api/load-object-learning",
           {
             method: "POST",
             headers: {

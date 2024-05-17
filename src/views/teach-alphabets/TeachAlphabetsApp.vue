@@ -366,7 +366,7 @@ export default {
     async fetchImageLearningData(learnImageIdx) {
       try {
         const response = await fetch(
-          "https://c330-20-191-199-83.ngrok-free.app/api/load-image-learning",
+          "https://d39e-20-5-25-56.ngrok-free.app/api/load-image-learning",
           {
             method: "POST",
             headers: {
