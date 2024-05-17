@@ -1311,7 +1311,6 @@ select {
   background-color: rgba(168, 85, 247, var(--tw-bg-opacity));
 }
 
-
 .bg-indigo-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(199, 210, 254, var(--tw-bg-opacity));
@@ -4460,6 +4459,16 @@ select {
     order: 3;
   }
 
+  .lg\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .lg\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -4668,4 +4677,8 @@ select {
   position: absolute;
   border: 3px solid rgb(57, 52, 211, 1);
   pointer-events: none; /* Prevent the rectangle from interfering with image click */
+}
+
+.menu-item-active {
+  border-bottom: 4px solid rgb(57, 52, 211, 1);
 }
