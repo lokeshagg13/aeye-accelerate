@@ -3,7 +3,7 @@
     class="w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow"
   >
     <div
-      class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      class="container px-2 mx-auto flex flex-wrap items-center justify-between"
     >
       <div
         class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
@@ -33,19 +33,19 @@
         :class="[navbarOpen ? 'block' : 'hidden']"
       >
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li class="flex items-center lg:mx-8">
+          <li class="flex items-center lg:nav-margin-big xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
             <router-link to="/">
               <a
-                class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+                class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
                 :class="getActiveClass('/')"
               >
                 Home
               </a>
             </router-link>
           </li>
-          <li class="flex items-center relative lg:mx-4">
+          <li class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
             <a
-              class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+              class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
               :class="getActiveClass('/teachVocab')"
               href="#"
               ref="teachVocabRef"
@@ -75,19 +75,19 @@
               </router-link>
             </div>
           </li>
-          <li class="flex items-center lg:mx-4">
+          <li class="flex items-center lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
             <router-link to="/teachCounting">
               <a
-                class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+                class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
                 :class="getActiveClass('/teachCounting')"
               >
                 Teach Counting
               </a></router-link
             >
           </li>
-          <li class="flex items-center relative lg:mx-4">
+          <li class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
             <a
-              class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+              class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
               :class="getActiveClass('/teachAlphabet')"
               href="#"
               ref="teachLettersRef"
@@ -175,14 +175,14 @@ export default {
     getActiveClass(route) {
       if (route == "/") {
         if (this.$route.path === "/") {
-          return "menu-item-active";
+          return "xs:menu-item-active sm:menu-item-active md:menu-item-active lg:nav-item-active";
         } else {
           return "";
         }
       }
 
       if (this.$route.path.includes(route)) {
-        return "menu-item-active";
+        return "xs:menu-item-active sm:menu-item-active md:menu-item-active lg:nav-item-active";
       } else {
         return "";
       }
