@@ -33,9 +33,20 @@
         :class="[navbarOpen ? 'block' : 'hidden']"
       >
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li class="flex items-center relative">
+          <li class="flex items-center lg:mx-8">
+            <router-link to="/">
+              <a
+                class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+                :class="getActiveClass('/')"
+              >
+                Home
+              </a>
+            </router-link>
+          </li>
+          <li class="flex items-center relative lg:mx-4">
             <a
-              class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-2xl font-bold"
+              class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+              :class="getActiveClass('/teachVocab')"
               href="#"
               ref="teachVocabRef"
               @click="toggleTeachVocabDropdown($event)"
@@ -64,18 +75,20 @@
               </router-link>
             </div>
           </li>
-          <li class="flex items-center">
+          <li class="flex items-center lg:mx-4">
             <router-link to="/teachCounting">
               <a
-                class="hover:text-blueGray-500 text-blueGray-700 px-4 py-2 flex items-center text-2xl font-bold"
+                class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+                :class="getActiveClass('/teachCounting')"
               >
                 Teach Counting
               </a></router-link
             >
           </li>
-          <li class="flex items-center relative">
+          <li class="flex items-center relative lg:mx-4">
             <a
-              class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-2xl font-bold"
+              class="hover:text-blueGray-500 text-blueGray-700 py-2 flex items-center text-2xl font-bold"
+              :class="getActiveClass('/teachAlphabet')"
               href="#"
               ref="teachLettersRef"
               @click="toggleTeachLettersDropdown($event)"
@@ -157,6 +170,21 @@ export default {
           }
         );
         setTimeout(() => (this.showTeachLettersDropdown = false), 5000);
+      }
+    },
+    getActiveClass(route) {
+      if (route == "/") {
+        if (this.$route.path === "/") {
+          return "menu-item-active";
+        } else {
+          return "";
+        }
+      }
+
+      if (this.$route.path.includes(route)) {
+        return "menu-item-active";
+      } else {
+        return "";
       }
     },
   },
