@@ -333,7 +333,7 @@ export default {
     async fetchCountLearningData() {
       try {
         const response = await fetch(
-          "https://5033-20-5-25-56.ngrok-free.app/api/load-numbers",
+          "https://07bf-20-5-25-56.ngrok-free.app/api/load-numbers",
           {
             method: "POST",
             headers: {
