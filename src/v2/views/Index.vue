@@ -25,10 +25,10 @@
                       color: white;
                     ">
                     <div class="px-4 py-5 flex-auto">
-                      <a href="/v2/learningLanguage">
+                      <router-link to="/v2/learningLanguageApp">
                         <i class="fas fa-sitemap" />
                         Use our Image Library to teach Words and Alphabet.
-                      </a>
+                      </router-link>
                     </div>
                   </div>
                   <div class="relative flex flex-col min-w-0 mt-4 shadow-lg p-6 bg-white rounded-lg" style="
@@ -36,10 +36,10 @@
                       color: white;
                     ">
                     <div class="px-4 py-5 flex-auto">
-                      <a href="/v2/testingLanguage">
+                      <router-link to="/v2/testingLanguageApp">
                         <i class="fas fa-sitemap" />
                         Use our Image Library to teach Word-Image Connections.
-                      </a>
+                      </router-link>
                     </div>
                   </div>
                 </div>
@@ -49,10 +49,10 @@
                       color: white;
                     ">
                     <div class="px-4 py-5 flex-auto">
-                      <a href="/v2/learningLanguage">
+                      <router-link to="/v2/learningLanguageSelf">
                         <i class="fas fa-sitemap" />
                         Use Images of your Surroundings to teach Words and Alphabet.
-                      </a>
+                      </router-link>
                     </div>
                   </div>
                   <div class="relative flex flex-col mt-4 shadow-lg p-6 bg-white rounded-lg" style="
@@ -60,10 +60,10 @@
                       color: white;
                     ">
                     <div class="px-4 py-5 flex-auto">
-                      <a href="/v2/testingLanguage">
+                      <router-link to="/v2/testingLanguageSelf">
                         <i class="fas fa-sitemap" />
                         Use Images of your Surroundings to teach Word-Image Connections.
-                      </a>
+                      </router-link>
                     </div>
                   </div>
                 </div>
@@ -73,8 +73,6 @@
         </div>
         <div class="w-full mt-8 sm:hidden"></div>
       </div>
-
-
     </section>
   </div>
 </template>

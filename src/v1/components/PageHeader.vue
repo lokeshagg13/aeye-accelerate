@@ -3,19 +3,40 @@
   <header class="header">
     <div class="navbar">
       <div @click="openDropdown" class="navbar-icon">
-        <svg t="1711784679283" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-          p-id="4371" width="32" height="32">
-          <path d="M0 128h1024v85.333333H0zM0 469.333333h1024v85.333334H0zM0 810.666667h1024v85.333333H0z"
-            fill="#2c2c2c" p-id="4372"></path>
+        <svg
+          t="1711784679283"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="4371"
+          width="32"
+          height="32"
+        >
+          <path
+            d="M0 128h1024v85.333333H0zM0 469.333333h1024v85.333334H0zM0 810.666667h1024v85.333333H0z"
+            fill="#2c2c2c"
+            p-id="4372"
+          ></path>
         </svg>
         <!-- Left navigation bar icon -->
       </div>
-      <div  class="navbar-mid">
+      <div class="navbar-mid">
         <div class="logo" @click="navigateToHomePage">
           <img src="@/v1/assets/project_logo.svg" width="62" height="62" />
         </div>
         <div class="app-title">
           <h1>A.EYE</h1>
+        </div>
+        <div class="app-back">
+          <router-link to="/"
+            ><button
+              class="bg-emerald-500 text-white active:bg-emerald-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+              type="button"
+            >
+              Back to Main Website
+            </button></router-link
+          >
         </div>
       </div>
     </div>
@@ -119,6 +140,12 @@ export default {
   cursor: pointer;
   border-bottom: 1px solid;
   text-align: left;
+}
+
+.app-back {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
 }
 
 @media screen and (max-width: 768px) {

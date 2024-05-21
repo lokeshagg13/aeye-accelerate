@@ -33,7 +33,9 @@
         :class="[navbarOpen ? 'block' : 'hidden']"
       >
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li class="flex items-center lg:nav-margin-big xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
+          <li
+            class="flex items-center lg:nav-margin-big xs:menu-item-margin sm:menu-item-margin md:menu-item-margin"
+          >
             <router-link to="/">
               <a
                 class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
@@ -43,7 +45,9 @@
               </a>
             </router-link>
           </li>
-          <li class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
+          <li
+            class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin"
+          >
             <a
               class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
               :class="getActiveClass('/teachVocab')"
@@ -75,7 +79,9 @@
               </router-link>
             </div>
           </li>
-          <li class="flex items-center lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
+          <li
+            class="flex items-center lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin"
+          >
             <router-link to="/teachCounting">
               <a
                 class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
@@ -85,7 +91,9 @@
               </a></router-link
             >
           </li>
-          <li class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin">
+          <li
+            class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin"
+          >
             <a
               class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-2xl font-bold"
               :class="getActiveClass('/teachAlphabet')"
@@ -117,6 +125,40 @@
               </router-link>
             </div>
           </li>
+          <li
+            class="flex items-center relative lg:nav-margin-small xs:menu-item-margin sm:menu-item-margin md:menu-item-margin"
+          >
+            <a
+              class="hover:text-blueGray-500 text-blueGray-700 lg:py-2 flex items-center text-lg font-bold"
+              :class="getActiveClass('/v')"
+              href="#"
+              ref="versionsRef"
+              @click="toggleVersionsDropdown($event)"
+            >
+              Where we started?
+            </a>
+            <div
+              ref="versionsDropdownRef"
+              class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+              v-bind:class="{
+                hidden: !showVersionsDropdown,
+                block: showVersionsDropdown,
+              }"
+            >
+              <router-link
+                to="/v1"
+                class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+              >
+                Version 1.0
+              </router-link>
+              <router-link
+                to="/v2"
+                class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+              >
+                Version 2.0
+              </router-link>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -132,6 +174,7 @@ export default {
       navbarOpen: false,
       showTeachVocabDropdown: false,
       showTeachLettersDropdown: false,
+      showVersionsDropdown: false,
     };
   },
   methods: {
@@ -145,6 +188,7 @@ export default {
       } else {
         this.showTeachVocabDropdown = true;
         this.showTeachLettersDropdown = false;
+        this.showVersionsDropdown = false;
         createPopper(
           this.$refs.teachVocabRef,
           this.$refs.teachVocabDropdownRef,
@@ -162,6 +206,7 @@ export default {
       } else {
         this.showTeachLettersDropdown = true;
         this.showTeachVocabDropdown = false;
+        this.showVersionsDropdown = false;
         createPopper(
           this.$refs.teachLettersRef,
           this.$refs.teachLettersDropdownRef,
@@ -170,6 +215,20 @@ export default {
           }
         );
         setTimeout(() => (this.showTeachLettersDropdown = false), 5000);
+      }
+    },
+    toggleVersionsDropdown(event) {
+      event.preventDefault();
+      if (this.showVersionsDropdown) {
+        this.showVersionsDropdown = false;
+      } else {
+        this.showVersionsDropdown = true;
+        this.showTeachLettersDropdown = false;
+        this.showTeachVocabDropdown = false;
+        createPopper(this.$refs.versionsRef, this.$refs.versionsDropdownRef, {
+          placement: "bottom-start",
+        });
+        setTimeout(() => (this.showVersionsDropdown = false), 5000);
       }
     },
     getActiveClass(route) {

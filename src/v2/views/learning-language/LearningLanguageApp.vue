@@ -70,7 +70,7 @@
                   class="w-full md:w-4/12 px-4 pt-12"
                 >
                   <div
-                    class="md:w-2/12 px-4 border border-solid border-blueGray-300"
+                    class="w-full px-4 border border-solid border-blueGray-300"
                   >
                     <h5 class="font-semibold text-xl text-blueGray-600">
                       This is:
@@ -90,7 +90,7 @@
                       ><br />
                     </h5>
                   </div>
-                  <div class="mt-12 md:w-2/12">
+                  <div class="mt-12 w-full">
                     <div class="flex flex-wrap justify-between">
                       <button
                         class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-base px-6 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -135,7 +135,7 @@
                     </div>
                   </div>
                   <div
-                    class="mt-12 min-h-20-px md:w-2/12 border border-solid border-blueGray-300"
+                    class="mt-12 min-h-20-px w-full border border-solid border-blueGray-300"
                   >
                     <h5 class="font-semibold text-xl text-blueGray-600">
                       Let's practice writing!
@@ -169,7 +169,7 @@
                   class="w-full md:w-4/12 px-4 pt-12"
                 >
                   <div
-                    class="md:w-2/12 border border-solid border-blueGray-300"
+                    class="w-full border border-solid border-blueGray-300"
                   >
                     <h5 class="font-semibold text-xl text-blueGray-600">
                       <i
